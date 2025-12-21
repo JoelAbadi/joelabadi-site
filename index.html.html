@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joel Abadi | Campaign Manager & Performance Marketing</title>
+  <meta name="description" content="Joel Abadi — Campaign Manager / Media Buyer. Experience across Meta, Google, and growth analytics. Portfolio, experience, and contact." />
+  <style>
+    :root{
+      --bg:#0b1020;
+      --card:#101a33;
+      --card2:#0f1730;
+      --text:#eaf0ff;
+      --muted:#b9c6e6;
+      --line:rgba(255,255,255,.10);
+      --accent:#7aa7ff;
+      --accent2:#a78bfa;
+      --shadow: 0 12px 40px rgba(0,0,0,.35);
+      --radius:18px;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
+      background: radial-gradient(1200px 600px at 20% -10%, rgba(122,167,255,.28), transparent 60%),
+                  radial-gradient(900px 500px at 90% 0%, rgba(167,139,250,.22), transparent 55%),
+                  var(--bg);
+      color:var(--text);
+      line-height:1.55;
+    }
+    a{color:inherit; text-decoration:none}
+    .wrap{max-width:1020px; margin:0 auto; padding:24px}
+    .nav{
+      position:sticky; top:0; backdrop-filter: blur(10px);
+      background: rgba(11,16,32,.55);
+      border-bottom:1px solid var(--line);
+      z-index:50;
+    }
+    .nav-inner{
+      max-width:1020px; margin:0 auto; padding:14px 24px;
+      display:flex; align-items:center; justify-content:space-between; gap:14px;
+    }
+    .brand{display:flex; gap:10px; align-items:center; font-weight:700}
+    .dot{
+      width:12px; height:12px; border-radius:99px;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      box-shadow: 0 0 0 4px rgba(122,167,255,.15);
+    }
+    .nav-links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
+    .nav-links a{
+      font-size:14px; color:var(--muted);
+      padding:8px 10px; border-radius:999px;
+      border:1px solid transparent;
+    }
+    .nav-links a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.03)}
+    .hero{
+      display:grid; grid-template-columns: 1.15fr .85fr; gap:18px;
+      padding:28px 0 10px;
+    }
+    @media (max-width: 860px){
+      .hero{grid-template-columns:1fr}
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(16,26,51,.90), rgba(15,23,48,.85));
+      border:1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+    .card-pad{padding:22px}
+    .tag{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+      font-size:13px;
+    }
+    h1{margin:12px 0 8px; font-size:40px; line-height:1.1}
+    @media (max-width: 520px){ h1{font-size:34px} }
+    .sub{color:var(--muted); font-size:16px; margin:0 0 16px}
+    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center; gap:10px;
+      padding:10px 14px; border-radius: 12px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      font-weight:600; font-size:14px;
+    }
+    .btn:hover{background: rgba(255,255,255,.06)}
+    .btn.primary{
+      border: none;
+      background: linear-gradient(135deg, var(--accent), var(--accent2));
+      color:#0b1020;
+    }
+    .btn.primary:hover{filter:brightness(1.05)}
+    .mini{
+      display:grid; gap:10px;
+    }
+    .stat{
+      padding:14px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .stat b{font-size:16px}
+    .stat span{color:var(--muted); font-size:13px}
+    .grid{
+      display:grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap:14px;
+      margin:16px 0 26px;
+    }
+    .col-6{grid-column: span 6}
+    .col-4{grid-column: span 4}
+    .col-8{grid-column: span 8}
+    .col-12{grid-column: span 12}
+    @media (max-width: 860px){
+      .col-6,.col-4,.col-8{grid-column: span 12}
+    }
+    h2{margin:0 0 10px; font-size:18px}
+    p{margin:0 0 12px}
+    .muted{color:var(--muted)}
+    .list{display:grid; gap:12px}
+    .item{
+      padding:14px;
+      border-radius: 14px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .item-top{
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+      margin-bottom:6px;
+    }
+    .item-title{font-weight:700}
+    .pill{
+      font-size:12px; color:var(--muted);
+      padding:5px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      white-space:nowrap;
+    }
+    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
+    .chip{
+      font-size:12px; padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+      color:var(--muted);
+    }
+    .footer{
+      padding:22px 0 30px;
+      border-top:1px solid var(--line);
+      color:var(--muted);
+      font-size:14px;
+      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
+    }
+    .k{
+      display:inline-flex; align-items:center; gap:8px;
+      padding:6px 10px; border-radius:999px;
+      border:1px solid var(--line);
+      background: rgba(255,255,255,.03);
+    }
+    .hr{height:1px; background:var(--line); margin:10px 0 0}
+  </style>
+</head>
+<body>
+  <div class="nav">
+    <div class="nav-inner">
+      <div class="brand"><span class="dot"></span> Joel Abadi</div>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Portfolio</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="card">
+        <div class="card-pad">
+          <div class="tag">Campaign Manager • Media Buyer • Growth & Analytics</div>
+          <h1>Joel Abadi</h1>
+          <p class="sub">
+            Data-driven performance marketer (Meta / Google) with hands-on experience in campaign planning, optimization,
+            and reporting. Based in Tel Aviv.
+          </p>
+
+          <div class="cta">
+            <a class="btn primary" href="#contact">Contact</a>
+            <a class="btn" href="https://www.linkedin.com/in/joel-abadi-28a244a1/" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a class="btn" href="https://www.datascienceportfol.io/joelabadi23" target="_blank" rel="noreferrer">Portfolio</a>
+            <!-- Replace CV.pdf with your file name once you upload it -->
+            <a class="btn" href="CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
+          </div>
+
+          <div class="hr"></div>
+          <p class="muted" style="margin-top:12px">
+            Quick summary: performance marketing, experimentation mindset, clean reporting, and strong stakeholder communication.
+          </p>
+        </div>
+      </div>
+
+      <div class="mini">
+        <div class="card">
+          <div class="card-pad">
+            <h2>Highlights</h2>
+            <div class="list">
+              <div class="stat"><b>Meta & Google</b><br><span>Campaign setup, optimization, reporting</span></div>
+              <div class="stat"><b>Data & BI</b><br><span>Excel, Looker Studio, SQL / dashboards</span></div>
+              <div class="stat"><b>Partnerships</b><br><span>Working with brands, creators, and internal teams</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT + DETAILS -->
+    <section id="about" class="grid">
+      <div class="card col-8">
+        <div class="card-pad">
+          <h2>About</h2>
+          <p class="muted">
+            Born and raised in Panama, now based in Tel Aviv. I like roles where creative testing meets numbers:
+            building campaigns, spotting what’s working, and scaling it with clean execution and reporting.
+          </p>
+          <div class="chips">
+            <span class="chip">English (Native)</span>
+            <span class="chip">Spanish (Native)</span>
+            <span class="chip">Tel Aviv, IL</span>
+            <span class="chip">Open to hybrid/on-site</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="card col-4">
+        <div class="card-pad">
+          <h2>Focus</h2>
+          <p class="muted" style="margin-bottom:10px">What I’m usually doing day-to-day:</p>
+          <div class="chips">
+            <span class="chip">Creative testing</span>
+            <span class="chip">Budget pacing</span>
+            <span class="chip">A/B experiments</span>
+            <span class="chip">Funnel analysis</span>
+            <span class="chip">Weekly reporting</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section id="experience" class="grid">
+      <div class="card col-12">
+        <div class="card-pad">
+          <h2>Experience</h2>
+          <div class="list">
+
+            <div class="item">
+              <div class="item-top">
+                <div>
+                  <div class="item-title">ThoughtLeaders — Campaign / Partnerships (Influencer Marketing)</div>
+                  <div class="muted">Runs influencer campaigns end-to-end for brands and creators.</div>
+                </div>
+                <div class="pill">2024 – Present</div>
+              </div>
+              <ul class="muted" style="margin:8px 0 0 18px">
+                <li>Manages campaigns from brief to delivery: creator sourcing, coordination, timelines, and approvals.</li>
+                <li>Tracks performance and reports outcomes; improves execution through iteration and better processes.</li>
+                <li>Keeps communication tight between clients, creators, and internal teams to hit deadlines.</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Campaign management</span>
+                <span class="chip">Stakeholder comms</span>
+                <span class="chip">Performance analysis</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <div>
+                  <div class="item-title">Performance Marketing / Media Buying (Meta & Google)</div>
+                  <div class="muted">Hands-on paid social + paid search execution and optimization.</div>
+                </div>
+                <div class="pill">3+ years</div>
+              </div>
+              <ul class="muted" style="margin:8px 0 0 18px">
+                <li>Builds and optimizes campaigns in Meta Ads Manager and Google Ads, focusing on testing and efficiency.</li>
+                <li>Monitors funnel performance, adjusts targeting/creative, and supports reporting and insights.</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Meta Ads Manager</span>
+                <span class="chip">Google Ads</span>
+                <span class="chip">Testing & optimization</span>
+              </div>
+            </div>
+
+            <div class="item">
+              <div class="item-top">
+                <div>
+                  <div class="item-title">eToro — Customer Success Manager</div>
+                  <div class="muted">Customer support, issue investigation, and resolution.</div>
+                </div>
+                <div class="pill">Past</div>
+              </div>
+              <ul class="muted" style="margin:8px 0 0 18px">
+                <li>Handled customer queries, built cases, and investigated platform issues to deliver solutions.</li>
+                <li>Maintained a high-quality customer experience with consistently strong reviews.</li>
+              </ul>
+              <div class="chips">
+                <span class="chip">Customer success</span>
+                <span class="chip">Problem solving</span>
+                <span class="chip">Communication</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="grid">
+      <div class="card col-6">
+        <div class="card-pad">
+          <h2>Core skills</h2>
+          <div class="chips">
+            <span class="chip">Campaign strategy</span>
+            <span class="chip">Optimization</span>
+            <span class="chip">Creative testing</span>
+            <span class="chip">Reporting</span>
+            <span class="chip">Stakeholder management</span>
+            <span class="chip">Influencer campaigns</span>
+          </div>
+        </div>
+      </div>
+      <div class="card col-6">
+        <div class="card-pad">
+          <h2>Tools</h2>
+          <div class="chips">
+            <span class="chip">Meta Ads Manager</span>
+            <span class="chip">Google Ads</span>
+            <span class="chip">Excel / Sheets</span>
+            <span class="chip">Looker Studio</span>
+            <span class="chip">SQL (basic/learning)</span>
+            <span class="chip">Tableau / Power BI (projects)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS / PORTFOLIO -->
+    <section id="projects" class="grid">
+      <div class="card col-12">
+        <div class="card-pad">
+          <h2>Portfolio</h2>
+          <p class="muted">A few things recruiters can click immediately:</p>
+          <div class="list">
+            <div class="item">
+              <div class="item-top">
+                <div class="item-title">Data Science Portfolio</div>
+                <a class="pill" href="https://www.datascienceportfol.io/joelabadi23" target="_blank" rel="noreferrer">Open</a>
+              </div>
+              <p class="muted" style="margin:0">Projects, dashboards, and analyses from my bootcamp + personal work.</p>
+            </div>
+            <div class="item">
+              <div class="item-top">
+                <div class="item-title">LinkedIn</div>
+                <a class="pill" href="https://www.linkedin.com/in/joel-abadi-28a244a1/" target="_blank" rel="noreferrer">Open</a>
+              </div>
+              <p class="muted" style="margin:0">Experience, recommendations, and background.</p>
+            </div>
+            <!-- Add more items if you want: GitHub, case studies, etc. -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="grid">
+      <div class="card col-12">
+        <div class="card-pad">
+          <h2>Contact</h2>
+          <p class="muted">Fastest way to reach me:</p>
+          <div class="chips">
+            <!-- Replace with your email -->
+            <span class="k">📩 joel.abadi@email.com</span>
+            <a class="k" href="https://www.linkedin.com/in/joel-abadi-28a244a1/" target="_blank" rel="noreferrer">🔗 LinkedIn Message</a>
+          </div>
+          <p class="muted" style="margin-top:12px">If you want, I can tailor this page to a specific role (Campaign Manager / Media Buyer / UA) with one click sections.</p>
+        </div>
+      </div>
+    </section>
+
+    <div class="footer">
+      <div>© <span id="y"></span> Joel Abadi</div>
+      <div class="muted">Simple, recruiter-friendly personal site</div>
+    </div>
+  </main>
+
+  <script>
+    document.getElementById("y").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
