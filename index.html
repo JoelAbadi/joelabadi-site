@@ -1,423 +1,596 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Joel Abadi | Campaign Manager & Performance Marketing</title>
-  <meta name="description" content="Joel Abadi — Campaign Manager / Media Buyer. Experience across Meta, Google, and growth analytics. Portfolio, experience, and contact." />
-  <style>
-    :root{
-      --bg:#0b1020;
-      --card:#101a33;
-      --card2:#0f1730;
-      --text:#eaf0ff;
-      --muted:#b9c6e6;
-      --line:rgba(255,255,255,.10);
-      --accent:#7aa7ff;
-      --accent2:#a78bfa;
-      --shadow: 0 12px 40px rgba(0,0,0,.35);
-      --radius:18px;
-    }
-    *{box-sizing:border-box}
-    body{
-      margin:0;
-      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Apple Color Emoji","Segoe UI Emoji";
-      background: radial-gradient(1200px 600px at 20% -10%, rgba(122,167,255,.28), transparent 60%),
-                  radial-gradient(900px 500px at 90% 0%, rgba(167,139,250,.22), transparent 55%),
-                  var(--bg);
-      color:var(--text);
-      line-height:1.55;
-    }
-    a{color:inherit; text-decoration:none}
-    .wrap{max-width:1020px; margin:0 auto; padding:24px}
-    .nav{
-      position:sticky; top:0; backdrop-filter: blur(10px);
-      background: rgba(11,16,32,.55);
-      border-bottom:1px solid var(--line);
-      z-index:50;
-    }
-    .nav-inner{
-      max-width:1020px; margin:0 auto; padding:14px 24px;
-      display:flex; align-items:center; justify-content:space-between; gap:14px;
-    }
-    .brand{display:flex; gap:10px; align-items:center; font-weight:700}
-    .dot{
-      width:12px; height:12px; border-radius:99px;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      box-shadow: 0 0 0 4px rgba(122,167,255,.15);
-    }
-    .nav-links{display:flex; gap:14px; flex-wrap:wrap; justify-content:flex-end}
-    .nav-links a{
-      font-size:14px; color:var(--muted);
-      padding:8px 10px; border-radius:999px;
-      border:1px solid transparent;
-    }
-    .nav-links a:hover{color:var(--text); border-color:var(--line); background:rgba(255,255,255,.03)}
-    .hero{
-      display:grid; grid-template-columns: 1.15fr .85fr; gap:18px;
-      padding:28px 0 10px;
-    }
-    @media (max-width: 860px){
-      .hero{grid-template-columns:1fr}
-    }
-    .card{
-      background: linear-gradient(180deg, rgba(16,26,51,.90), rgba(15,23,48,.85));
-      border:1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow:hidden;
-    }
-    .card-pad{padding:22px}
-    .tag{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:6px 10px; border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color:var(--muted);
-      font-size:13px;
-    }
-    h1{margin:12px 0 8px; font-size:40px; line-height:1.1}
-    @media (max-width: 520px){ h1{font-size:34px} }
-    .sub{color:var(--muted); font-size:16px; margin:0 0 16px}
-    .cta{display:flex; gap:10px; flex-wrap:wrap; margin-top:16px}
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center; gap:10px;
-      padding:10px 14px; border-radius: 12px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      font-weight:600; font-size:14px;
-    }
-    .btn:hover{background: rgba(255,255,255,.06)}
-    .btn.primary{
-      border: none;
-      background: linear-gradient(135deg, var(--accent), var(--accent2));
-      color:#0b1020;
-    }
-    .btn.primary:hover{filter:brightness(1.05)}
-    .mini{
-      display:grid; gap:10px;
-    }
-    .stat{
-      padding:14px;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-    .stat b{font-size:16px}
-    .stat span{color:var(--muted); font-size:13px}
-    .grid{
-      display:grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap:14px;
-      margin:16px 0 26px;
-    }
-    .col-6{grid-column: span 6}
-    .col-4{grid-column: span 4}
-    .col-8{grid-column: span 8}
-    .col-12{grid-column: span 12}
-    @media (max-width: 860px){
-      .col-6,.col-4,.col-8{grid-column: span 12}
-    }
-    h2{margin:0 0 10px; font-size:18px}
-    p{margin:0 0 12px}
-    .muted{color:var(--muted)}
-    .list{display:grid; gap:12px}
-    .item{
-      padding:14px;
-      border-radius: 14px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-    .item-top{
-      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
-      margin-bottom:6px;
-    }
-    .item-title{font-weight:700}
-    .pill{
-      font-size:12px; color:var(--muted);
-      padding:5px 10px; border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      white-space:nowrap;
-    }
-    .chips{display:flex; flex-wrap:wrap; gap:8px; margin-top:10px}
-    .chip{
-      font-size:12px; padding:6px 10px; border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-      color:var(--muted);
-    }
-    .footer{
-      padding:22px 0 30px;
-      border-top:1px solid var(--line);
-      color:var(--muted);
-      font-size:14px;
-      display:flex; justify-content:space-between; gap:10px; flex-wrap:wrap;
-    }
-    .k{
-      display:inline-flex; align-items:center; gap:8px;
-      padding:6px 10px; border-radius:999px;
-      border:1px solid var(--line);
-      background: rgba(255,255,255,.03);
-    }
-    .hr{height:1px; background:var(--line); margin:10px 0 0}
-  </style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Joel Abadi — Performance Marketing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --bg: #f7f5f0;
+    --bg2: #eeeae1;
+    --surface: #ffffff;
+    --text: #1a1916;
+    --muted: #6b6760;
+    --accent: #b85c2a;
+    --accent2: #d4813d;
+    --border: rgba(26,25,22,0.12);
+    --tag-bg: #ede9e0;
+    --tag-text: #5a4e3c;
+    --radius: 10px;
+    --ff-display: 'DM Serif Display', Georgia, serif;
+    --ff-body: 'DM Sans', system-ui, sans-serif;
+  }
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--ff-body);
+    font-size: 16px;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* NAV */
+  nav {
+    position: sticky; top: 0; z-index: 100;
+    background: rgba(247,245,240,0.92);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    padding: 0 clamp(1.5rem, 5vw, 4rem);
+    display: flex; align-items: center; justify-content: space-between;
+    height: 56px;
+  }
+  .nav-logo {
+    font-family: var(--ff-display);
+    font-size: 1.15rem;
+    letter-spacing: 0.01em;
+    color: var(--text);
+    text-decoration: none;
+  }
+  .nav-links { display: flex; gap: 2rem; list-style: none; }
+  .nav-links a {
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--muted);
+    letter-spacing: 0.02em;
+    transition: color 0.2s;
+  }
+  .nav-links a:hover { color: var(--accent); }
+  .nav-cta {
+    background: var(--text);
+    color: var(--bg) !important;
+    padding: 0.4rem 1rem;
+    border-radius: 6px;
+    font-size: 0.8125rem !important;
+  }
+  .nav-cta:hover { background: var(--accent) !important; color: #fff !important; }
+
+  /* HERO */
+  .hero {
+    padding: clamp(4rem, 10vh, 7rem) clamp(1.5rem, 5vw, 4rem) clamp(3rem, 7vh, 5rem);
+    max-width: 1100px; margin: 0 auto;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.8rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin-bottom: 1.25rem;
+  }
+  .hero-eyebrow::before {
+    content: ''; display: block; width: 24px; height: 1.5px; background: var(--accent);
+  }
+  .hero h1 {
+    font-family: var(--ff-display);
+    font-size: clamp(2.8rem, 5vw, 4.2rem);
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    color: var(--text);
+    margin-bottom: 1.25rem;
+  }
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+  .hero-desc {
+    font-size: 1.0625rem;
+    color: var(--muted);
+    max-width: 44ch;
+    margin-bottom: 2rem;
+    line-height: 1.75;
+  }
+  .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+  .btn {
+    display: inline-block; text-decoration: none;
+    padding: 0.65rem 1.5rem; border-radius: 7px;
+    font-size: 0.9rem; font-weight: 500; transition: all 0.2s;
+    cursor: pointer;
+  }
+  .btn-primary { background: var(--text); color: var(--bg); }
+  .btn-primary:hover { background: var(--accent); }
+  .btn-secondary {
+    background: transparent; color: var(--text);
+    border: 1px solid var(--border);
+  }
+  .btn-secondary:hover { border-color: var(--accent); color: var(--accent); }
+
+  .hero-right {
+    display: flex; flex-direction: column; gap: 1rem;
+  }
+  .stat-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem 1.5rem;
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .stat-icon {
+    width: 42px; height: 42px; border-radius: 10px;
+    background: var(--tag-bg); display: flex; align-items: center;
+    justify-content: center; flex-shrink: 0; font-size: 18px;
+  }
+  .stat-label { font-size: 0.8rem; color: var(--muted); margin-bottom: 2px; }
+  .stat-value { font-size: 1.1rem; font-weight: 500; color: var(--text); }
+  .stat-sub { font-size: 0.8rem; color: var(--muted); }
+
+  /* SECTION LAYOUT */
+  section { padding: clamp(3rem, 7vh, 5.5rem) clamp(1.5rem, 5vw, 4rem); }
+  .section-inner { max-width: 1100px; margin: 0 auto; }
+  .section-header { margin-bottom: 3rem; }
+  .section-kicker {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 0.75rem; letter-spacing: 0.12em; text-transform: uppercase;
+    color: var(--accent); font-weight: 500; margin-bottom: 0.75rem;
+  }
+  .section-kicker::before {
+    content: ''; display: block; width: 18px; height: 1.5px; background: var(--accent);
+  }
+  .section-title {
+    font-family: var(--ff-display);
+    font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+    letter-spacing: -0.02em;
+    color: var(--text);
+    line-height: 1.2;
+  }
+  .section-desc { font-size: 1rem; color: var(--muted); margin-top: 0.75rem; max-width: 55ch; }
+
+  /* ABOUT */
+  #about { background: var(--surface); border-top: 1px solid var(--border); }
+  .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .about-text p { color: var(--muted); margin-bottom: 1rem; font-size: 1.0125rem; line-height: 1.8; }
+  .about-details { display: flex; flex-direction: column; gap: 1rem; }
+  .detail-row {
+    display: flex; gap: 1rem; align-items: flex-start;
+    padding: 1rem 1.25rem;
+    background: var(--bg);
+    border-radius: var(--radius);
+    border: 1px solid var(--border);
+  }
+  .detail-row-icon { font-size: 18px; flex-shrink: 0; margin-top: 1px; }
+  .detail-row-label { font-size: 0.8rem; color: var(--muted); }
+  .detail-row-value { font-weight: 500; font-size: 0.95rem; }
+
+  /* CERTS */
+  #certifications { background: var(--bg); }
+  .certs-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 1rem; }
+  .cert-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.25rem;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .cert-card:hover { border-color: var(--accent2); transform: translateY(-2px); }
+  .cert-badge {
+    font-size: 1.5rem; margin-bottom: 0.75rem;
+  }
+  .cert-name { font-weight: 500; font-size: 0.9rem; margin-bottom: 0.25rem; }
+  .cert-issuer { font-size: 0.8rem; color: var(--muted); }
+  .cert-tag {
+    display: inline-block; margin-top: 0.6rem;
+    background: var(--tag-bg); color: var(--tag-text);
+    font-size: 0.7rem; padding: 2px 8px; border-radius: 4px;
+  }
+
+  /* EXPERIENCE */
+  #experience { background: var(--surface); border-top: 1px solid var(--border); }
+  .exp-list { display: flex; flex-direction: column; gap: 2rem; }
+  .exp-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2rem;
+    position: relative;
+    transition: border-color 0.2s;
+  }
+  .exp-card:hover { border-color: var(--accent2); }
+  .exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 1rem; flex-wrap: wrap; margin-bottom: 0.25rem; }
+  .exp-company { font-family: var(--ff-display); font-size: 1.3rem; color: var(--text); }
+  .exp-period {
+    font-size: 0.8rem; color: var(--muted);
+    background: var(--surface); border: 1px solid var(--border);
+    padding: 3px 10px; border-radius: 20px;
+    white-space: nowrap;
+  }
+  .exp-role { font-size: 0.9rem; color: var(--accent); font-weight: 500; margin-bottom: 0.25rem; }
+  .exp-loc { font-size: 0.8rem; color: var(--muted); margin-bottom: 1rem; }
+  .exp-desc { font-size: 0.95rem; color: var(--muted); margin-bottom: 1rem; font-style: italic; }
+  .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 1.25rem; }
+  .exp-bullets li {
+    font-size: 0.9375rem; color: var(--muted);
+    padding-left: 1.25rem; position: relative;
+    line-height: 1.65;
+  }
+  .exp-bullets li::before {
+    content: '—'; position: absolute; left: 0; color: var(--accent2);
+  }
+  .exp-tags { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+  .tag {
+    background: var(--tag-bg); color: var(--tag-text);
+    font-size: 0.75rem; padding: 3px 10px; border-radius: 5px;
+    font-weight: 400;
+  }
+
+  /* SKILLS */
+  #skills { background: var(--bg); }
+  .skills-cols { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; }
+  .skills-col h3 {
+    font-family: var(--ff-display); font-size: 1.1rem;
+    margin-bottom: 1rem; color: var(--text);
+  }
+  .skill-list { display: flex; flex-direction: column; gap: 0.4rem; }
+  .skill-item {
+    font-size: 0.875rem; color: var(--muted);
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+  }
+
+  /* PORTFOLIO */
+  #portfolio { background: var(--surface); border-top: 1px solid var(--border); }
+  .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1.5rem; }
+  .portfolio-card {
+    background: var(--bg);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.75rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+  .portfolio-card:hover { border-color: var(--accent); transform: translateY(-3px); }
+  .portfolio-card-icon { font-size: 2rem; margin-bottom: 1rem; }
+  .portfolio-card h3 { font-family: var(--ff-display); font-size: 1.1rem; margin-bottom: 0.4rem; }
+  .portfolio-card p { font-size: 0.875rem; color: var(--muted); line-height: 1.6; }
+  .portfolio-card-link {
+    display: inline-flex; align-items: center; gap: 4px;
+    margin-top: 1rem; font-size: 0.8rem; color: var(--accent); font-weight: 500;
+  }
+
+  /* CONTACT */
+  #contact { background: var(--bg); border-top: 1px solid var(--border); }
+  .contact-inner { max-width: 600px; }
+  .contact-links { display: flex; flex-direction: column; gap: 1rem; margin-top: 2rem; }
+  .contact-link {
+    display: flex; align-items: center; gap: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 1.1rem 1.5rem;
+    text-decoration: none; color: inherit;
+    transition: border-color 0.2s;
+  }
+  .contact-link:hover { border-color: var(--accent); }
+  .contact-link-icon { font-size: 20px; }
+  .contact-link-label { font-size: 0.8rem; color: var(--muted); }
+  .contact-link-value { font-weight: 500; font-size: 0.95rem; }
+
+  /* FOOTER */
+  footer {
+    background: var(--text); color: rgba(247,245,240,0.55);
+    padding: 2rem clamp(1.5rem, 5vw, 4rem);
+    font-size: 0.8rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 1rem;
+  }
+  footer a { color: rgba(247,245,240,0.55); text-decoration: none; }
+  footer a:hover { color: var(--accent2); }
+  .footer-logo { font-family: var(--ff-display); font-size: 1rem; color: rgba(247,245,240,0.85); }
+
+  /* RESPONSIVE */
+  @media (max-width: 768px) {
+    .hero { grid-template-columns: 1fr; gap: 2.5rem; }
+    .about-grid { grid-template-columns: 1fr; gap: 2rem; }
+    .skills-cols { grid-template-columns: 1fr; }
+    .nav-links { display: none; }
+  }
+</style>
 </head>
 <body>
-  <div class="nav">
-    <div class="nav-inner">
-      <div class="brand"><span class="dot"></span> Joel Abadi</div>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#skills">Skills</a>
-        <a href="#projects">Portfolio</a>
-        <a href="#contact">Contact</a>
+
+<nav>
+  <a href="#" class="nav-logo">Joel Abadi</a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#certifications">Certifications</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#portfolio">Portfolio</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div>
+    <div class="hero-eyebrow">Performance Marketing</div>
+    <h1>Joel<br/><em>Abadi</em></h1>
+    <p class="hero-desc">
+      Senior Media Buyer & Campaign Manager with a track record across Meta, Google, and mobile platforms. I build, test, and scale campaigns that move real numbers.
+    </p>
+    <div class="hero-actions">
+      <a href="https://joelabadi.github.io/joelabadi-site/CV.pdf" target="_blank" class="btn btn-primary">Download CV</a>
+      <a href="#contact" class="btn btn-secondary">Get in touch</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="stat-card">
+      <div class="stat-icon">📍</div>
+      <div>
+        <div class="stat-label">Currently based in</div>
+        <div class="stat-value">Panama / Tel Aviv</div>
+        <div class="stat-sub">Open to hybrid & remote</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">💰</div>
+      <div>
+        <div class="stat-label">Peak monthly budget managed</div>
+        <div class="stat-value">$1.5M+ across channels</div>
+        <div class="stat-sub">Meta · Google · Mobile UA</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">📱</div>
+      <div>
+        <div class="stat-label">Mobile specialization</div>
+        <div class="stat-value">User Acquisition (UA)</div>
+        <div class="stat-sub">AppsFlyer · Moloco · Kayzen</div>
+      </div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-icon">🌎</div>
+      <div>
+        <div class="stat-label">Languages</div>
+        <div class="stat-value">English · Spanish (both native)</div>
+        <div class="stat-sub">Hebrew (basic)</div>
       </div>
     </div>
   </div>
+</div>
 
-  <main class="wrap">
-    <!-- HERO -->
-    <section class="hero">
-      <div class="card">
-        <div class="card-pad">
-          <div class="tag">Campaign Manager • Media Buyer • Growth & Analytics</div>
-          <h1>Joel Abadi</h1>
-          <p class="sub">
-            Data-driven performance marketer (Meta / Google) with hands-on experience in campaign planning, optimization,
-            and reporting. Based in Tel Aviv.
-          </p>
-
-          <div class="cta">
-            <a class="btn primary" href="#contact">Contact</a>
-            <a class="btn" href="https://www.linkedin.com/in/joel-abadi-28a244a1/" target="_blank" rel="noreferrer">LinkedIn</a>
-            <a class="btn" href="https://www.datascienceportfol.io/joelabadi23" target="_blank" rel="noreferrer">Portfolio</a>
-            <!-- Replace CV.pdf with your file name once you upload it -->
-            <a class="btn" href="CV.pdf" target="_blank" rel="noreferrer">Download CV</a>
-          </div>
-
-          <div class="hr"></div>
-          <p class="muted" style="margin-top:12px">
-            Quick summary: performance marketing, experimentation mindset, clean reporting, and strong stakeholder communication.
-          </p>
+<!-- ABOUT -->
+<section id="about">
+  <div class="section-inner">
+    <div class="about-grid">
+      <div class="about-text">
+        <div class="section-header" style="margin-bottom:1.5rem;">
+          <div class="section-kicker">About</div>
+          <h2 class="section-title">The person behind the campaigns</h2>
         </div>
+        <p>
+          Born and raised in Panama, I've built most of my career in Tel Aviv — working at the intersection of paid media, data, and creative strategy. I like roles where experimentation is part of the culture and there's real accountability on performance.
+        </p>
+        <p>
+          My background spans traditional performance marketing (Meta, Google) and mobile-specific platforms including Moloco, Kayzen, and AppsFlyer attribution. I'm comfortable running high-spend campaigns, owning the reporting layer, and iterating quickly on creative.
+        </p>
+        <p>
+          Currently exploring opportunities in Latin America — particularly Panama — where I can bring this experience to growth-focused teams looking to scale their digital channels.
+        </p>
       </div>
-
-      <div class="mini">
-        <div class="card">
-          <div class="card-pad">
-            <h2>Highlights</h2>
-            <div class="list">
-              <div class="stat"><b>Meta & Google</b><br><span>Campaign setup, optimization, reporting</span></div>
-              <div class="stat"><b>Data & BI</b><br><span>Excel, Looker Studio, SQL / dashboards</span></div>
-              <div class="stat"><b>Partnerships</b><br><span>Working with brands, creators, and internal teams</span></div>
-            </div>
+      <div class="about-details">
+        <div class="detail-row">
+          <div class="detail-row-icon">📍</div>
+          <div>
+            <div class="detail-row-label">Location</div>
+            <div class="detail-row-value">Panama / Tel Aviv, Israel</div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- ABOUT + DETAILS -->
-    <section id="about" class="grid">
-      <div class="card col-8">
-        <div class="card-pad">
-          <h2>About</h2>
-          <p class="muted">
-            Born and raised in Panama, now based in Tel Aviv. I like roles where creative testing meets numbers:
-            building campaigns, spotting what’s working, and scaling it with clean execution and reporting.
-          </p>
-          <div class="chips">
-            <span class="chip">English (Native)</span>
-            <span class="chip">Spanish (Native)</span>
-            <span class="chip">Tel Aviv, IL</span>
-            <span class="chip">Open to hybrid/on-site</span>
+        <div class="detail-row">
+          <div class="detail-row-icon">🌐</div>
+          <div>
+            <div class="detail-row-label">Languages</div>
+            <div class="detail-row-value">English (Native) · Spanish (Native) · Hebrew (Basic)</div>
           </div>
         </div>
-      </div>
-
-      <div class="card col-4">
-        <div class="card-pad">
-          <h2>Focus</h2>
-          <p class="muted" style="margin-bottom:10px">What I’m usually doing day-to-day:</p>
-          <div class="chips">
-            <span class="chip">Creative testing</span>
-            <span class="chip">Budget pacing</span>
-            <span class="chip">A/B experiments</span>
-            <span class="chip">Funnel analysis</span>
-            <span class="chip">Weekly reporting</span>
+        <div class="detail-row">
+          <div class="detail-row-icon">🎓</div>
+          <div>
+            <div class="detail-row-label">Education</div>
+            <div class="detail-row-value">Data Science Bootcamp</div>
           </div>
         </div>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
- <!-- EXPERIENCE -->
-<section id="experience" class="grid">
-  <div class="card col-12">
-    <div class="card-pad">
-      <h2>Experience</h2>
-      <div class="list">
-
-        <!-- ThoughtLeaders -->
-        <div class="item">
-          <div class="item-top">
-            <div>
-              <div class="item-title">ThoughtLeaders — Campaign & Partnerships Coordinator (Influencer Marketing) | Tel Aviv</div>
-              <div class="muted">Influencer marketing platform focused on performance-driven creator campaigns.</div>
-            </div>
-            <div class="pill">2025 – Present</div>
-          </div>
-          <ul class="muted" style="margin:8px 0 0 18px">
-            <li>Manages creator campaigns end-to-end from planning to execution, keeping timelines, deliverables, and approvals on track.</li>
-            <li>Works closely with brands, creators, and internal teams to align messaging, formats, and campaign goals.</li>
-            <li>Reviews performance and optimizes based on engagement and conversion signals to improve results.</li>
-          </ul>
-          <div class="chips">
-            <span class="chip">Influencer campaigns</span>
-            <span class="chip">Partnerships</span>
-            <span class="chip">Stakeholder comms</span>
-            <span class="chip">Performance review</span>
+        <div class="detail-row">
+          <div class="detail-row-icon">💼</div>
+          <div>
+            <div class="detail-row-label">Availability</div>
+            <div class="detail-row-value">Open to hybrid, remote, or on-site</div>
           </div>
         </div>
-
-        <!-- Decido -->
-        <div class="item">
-          <div class="item-top">
-            <div>
-              <div class="item-title">Decido — Campaign Manager / Media Buyer | Tel Aviv</div>
-              <div class="muted">Startup creating and promoting digital content through paid media.</div>
-            </div>
-            <div class="pill">2023 – 2024</div>
-          </div>
-          <ul class="muted" style="margin:8px 0 0 18px">
-            <li>Ran Facebook (Meta) campaigns with daily spend up to $70K, while keeping performance stable as spend scaled.</li>
-            <li>Led A/B testing on creatives and audiences, improving efficiency (25% CTR lift, 15% lower CPC).</li>
-            <li>Monitored funnel performance and iterated targeting, creatives, and bidding to improve results over time.</li>
-          </ul>
-          <div class="chips">
-            <span class="chip">Meta Ads Manager</span>
-            <span class="chip">A/B testing</span>
-            <span class="chip">Budget pacing</span>
-            <span class="chip">Optimization</span>
+        <div class="detail-row">
+          <div class="detail-row-icon">📊</div>
+          <div>
+            <div class="detail-row-label">Focus areas</div>
+            <div class="detail-row-value">Paid Social · Mobile UA · Performance Analytics</div>
           </div>
         </div>
-
-        <!-- Singular One -->
-        <div class="item">
-          <div class="item-top">
-            <div>
-              <div class="item-title">Singular One — Data Analyst / Media Buyer & Campaign Manager | Tel Aviv</div>
-              <div class="muted">Publishing and advertising startup focused on content performance.</div>
-            </div>
-            <div class="pill">2021 – 2023</div>
-          </div>
-          <ul class="muted" style="margin:8px 0 0 18px">
-            <li>Managed $1.5M+ monthly budgets across paid channels.</li>
-            <li>Scaled winning campaigns while maintaining ROI above 120%.</li>
-            <li>Worked closely with creative teams to improve overall performance and scale what worked.</li>
-          </ul>
-          <div class="chips">
-            <span class="chip">Budget management</span>
-            <span class="chip">ROI focus</span>
-            <span class="chip">Performance analysis</span>
-            <span class="chip">Creative collaboration</span>
-          </div>
-        </div>
-
-        <!-- Omaiwa -->
-        <div class="item">
-          <div class="item-top">
-            <div>
-              <div class="item-title">Omaiwa Technologies — Marketing Specialist | Tel Aviv</div>
-              <div class="muted">Digital initiative launched during the pandemic to support businesses with online growth.</div>
-            </div>
-            <div class="pill">2020 – 2021</div>
-          </div>
-          <ul class="muted" style="margin:8px 0 0 18px">
-            <li>Built and managed a digital marketing team to support small businesses with online presence and growth.</li>
-            <li>Improved visibility, engagement, and revenue through digital strategy and execution.</li>
-          </ul>
-          <div class="chips">
-            <span class="chip">Digital marketing</span>
-            <span class="chip">Strategy</span>
-            <span class="chip">Execution</span>
-          </div>
-        </div>
-
       </div>
     </div>
   </div>
 </section>
 
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Certifications</div>
+      <h2 class="section-title">Platform expertise, verified</h2>
+      <p class="section-desc">Certified across the major mobile and performance marketing stack.</p>
+    </div>
+    <div class="certs-grid">
+      <div class="cert-card">
+        <div class="cert-badge">📲</div>
+        <div class="cert-name">AppsFlyer Certified</div>
+        <div class="cert-issuer">AppsFlyer</div>
+        <div class="cert-tag">Mobile Attribution</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">🤖</div>
+        <div class="cert-name">Moloco Certified</div>
+        <div class="cert-issuer">Moloco</div>
+        <div class="cert-tag">Mobile UA / ML Bidding</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">📡</div>
+        <div class="cert-name">Kayzen Certified</div>
+        <div class="cert-issuer">Kayzen</div>
+        <div class="cert-tag">Programmatic Mobile</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">⚡</div>
+        <div class="cert-name">Google AI-Powered Performance Ads</div>
+        <div class="cert-issuer">Google</div>
+        <div class="cert-tag">PMax · Smart Bidding</div>
+      </div>
+      <div class="cert-card">
+        <div class="cert-badge">🎯</div>
+        <div class="cert-name">Meta Blueprint</div>
+        <div class="cert-issuer">Meta</div>
+        <div class="cert-tag">Paid Social</div>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- SKILLS -->
-    <!-- SKILLS -->
-<section id="skills" class="grid">
-  <div class="card col-12">
-    <div class="card-pad">
-      <h2>Skills</h2>
+<!-- EXPERIENCE -->
+<section id="experience">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Experience</div>
+      <h2 class="section-title">Where I've made an impact</h2>
+    </div>
+    <div class="exp-list">
 
-      <div class="grid" style="margin-top:12px">
-        <!-- MARKETING -->
-        <div class="card col-4" style="box-shadow:none">
-          <div class="card-pad">
-            <h2 style="margin-bottom:10px">Marketing</h2>
-            <div class="chips">
-              <span class="chip">Performance marketing</span>
-              <span class="chip">Campaign management</span>
-              <span class="chip">Media buying</span>
-              <span class="chip">User acquisition (UA)</span>
-              <span class="chip">Paid social (Meta)</span>
-              <span class="chip">Paid search (Google Ads)</span>
-              <span class="chip">Creative testing & iteration</span>
-              <span class="chip">Budget pacing</span>
-              <span class="chip">Funnel optimization</span>
-              <span class="chip">Conversion rate optimization (CRO)</span>
-              <span class="chip">Influencer marketing</span>
-              <span class="chip">Creator partnerships</span>
-              <span class="chip">Client communication</span>
-              <span class="chip">Cross-team collaboration</span>
-            </div>
-          </div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-company">ThoughtLeaders</div>
+          <div class="exp-period">2025 – Present</div>
         </div>
-
-        <!-- ANALYTICS -->
-        <div class="card col-4" style="box-shadow:none">
-          <div class="card-pad">
-            <h2 style="margin-bottom:10px">Analytics</h2>
-            <div class="chips">
-              <span class="chip">Performance reporting</span>
-              <span class="chip">Data analysis</span>
-              <span class="chip">A/B testing</span>
-              <span class="chip">Experiment design</span>
-              <span class="chip">KPI tracking</span>
-              <span class="chip">Insight generation</span>
-              <span class="chip">Trend analysis</span>
-              <span class="chip">Dashboard analysis</span>
-              <span class="chip">Funnel analysis</span>
-              <span class="chip">SQL (basic / learning)</span>
-            </div>
-          </div>
+        <div class="exp-role">Campaign & Partnerships Coordinator — Influencer Marketing</div>
+        <div class="exp-loc">📍 Tel Aviv, Israel</div>
+        <div class="exp-desc">Performance-driven influencer marketing platform connecting brands with creators.</div>
+        <ul class="exp-bullets">
+          <li>Manages creator campaigns end-to-end — from planning and briefs through execution, keeping timelines, deliverables, and approvals on track.</li>
+          <li>Works closely with brands, creators, and internal teams to align messaging, formats, and campaign goals.</li>
+          <li>Reviews performance signals (engagement, conversions) and iterates on campaign strategy to improve results.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">Influencer campaigns</span>
+          <span class="tag">Partnerships</span>
+          <span class="tag">Stakeholder comms</span>
+          <span class="tag">Performance review</span>
         </div>
+      </div>
 
-        <!-- TOOLS -->
-        <div class="card col-4" style="box-shadow:none">
-          <div class="card-pad">
-            <h2 style="margin-bottom:10px">Tools</h2>
-            <div class="chips">
-              <span class="chip">Meta Ads Manager</span>
-              <span class="chip">Google Ads</span>
-              <span class="chip">Excel</span>
-              <span class="chip">Google Sheets</span>
-              <span class="chip">Looker Studio</span>
-              <span class="chip">Tableau (projects)</span>
-              <span class="chip">Power BI (projects)</span>
-              <span class="chip">Google Analytics (basic)</span>
-              <span class="chip">VS Code</span>
-              <span class="chip">GitHub</span>
-            </div>
-          </div>
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-company">Luns</div>
+          <div class="exp-period">2024 – 2025</div>
+        </div>
+        <div class="exp-role">Senior Media Buyer & Campaign Manager — Mobile UA</div>
+        <div class="exp-loc">📍 Tel Aviv, Israel</div>
+        <div class="exp-desc">Mobile-first performance marketing company focused on user acquisition at scale.</div>
+        <ul class="exp-bullets">
+          <li>Led mobile user acquisition campaigns across programmatic and social channels, owning full-funnel strategy from targeting to post-install KPIs.</li>
+          <li>Worked hands-on with AppsFlyer for attribution, Moloco for ML-driven bidding, and Kayzen for programmatic mobile inventory.</li>
+          <li>Managed and optimized campaigns on Meta and Google with a focus on install volume and ROAS targets.</li>
+          <li>Reported on campaign performance to stakeholders with structured dashboards built in Looker Studio.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">Mobile UA</span>
+          <span class="tag">AppsFlyer</span>
+          <span class="tag">Moloco</span>
+          <span class="tag">Kayzen</span>
+          <span class="tag">Meta</span>
+          <span class="tag">Google</span>
+          <span class="tag">ROAS optimization</span>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-company">Decido</div>
+          <div class="exp-period">2023 – 2024</div>
+        </div>
+        <div class="exp-role">Campaign Manager / Media Buyer</div>
+        <div class="exp-loc">📍 Tel Aviv, Israel</div>
+        <div class="exp-desc">Startup creating and promoting digital content through paid media.</div>
+        <ul class="exp-bullets">
+          <li>Ran Facebook (Meta) campaigns with daily spend up to $70K while keeping performance stable as budgets scaled.</li>
+          <li>Led A/B testing on creatives and audiences — achieved 25% CTR lift and 15% lower CPC through systematic iteration.</li>
+          <li>Monitored funnel performance and iterated on targeting, creatives, and bidding strategy to compound results over time.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">Meta Ads Manager</span>
+          <span class="tag">A/B testing</span>
+          <span class="tag">Budget pacing</span>
+          <span class="tag">$70K daily spend</span>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-company">Singular One</div>
+          <div class="exp-period">2021 – 2023</div>
+        </div>
+        <div class="exp-role">Data Analyst / Media Buyer & Campaign Manager</div>
+        <div class="exp-loc">📍 Tel Aviv, Israel</div>
+        <div class="exp-desc">Publishing and advertising startup focused on content performance at scale.</div>
+        <ul class="exp-bullets">
+          <li>Managed $1.5M+ monthly budgets across paid channels — Meta and Google primary.</li>
+          <li>Scaled winning campaigns while maintaining ROI above 120% consistently.</li>
+          <li>Collaborated closely with creative teams to improve ad performance and scale what worked.</li>
+          <li>Built performance reports and dashboards to track KPIs and surface insights for leadership.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">$1.5M+ monthly budget</span>
+          <span class="tag">ROI 120%+</span>
+          <span class="tag">Performance analysis</span>
+          <span class="tag">Creative collaboration</span>
+        </div>
+      </div>
+
+      <div class="exp-card">
+        <div class="exp-header">
+          <div class="exp-company">Omaiwa Technologies</div>
+          <div class="exp-period">2020 – 2021</div>
+        </div>
+        <div class="exp-role">Marketing Specialist</div>
+        <div class="exp-loc">📍 Tel Aviv, Israel</div>
+        <div class="exp-desc">Digital initiative launched during the pandemic to support businesses with online growth.</div>
+        <ul class="exp-bullets">
+          <li>Built and managed a digital marketing team to support small businesses with online presence and growth strategy.</li>
+          <li>Improved visibility, engagement, and revenue through digital execution across paid and organic channels.</li>
+        </ul>
+        <div class="exp-tags">
+          <span class="tag">Digital marketing</span>
+          <span class="tag">Team management</span>
+          <span class="tag">Strategy</span>
         </div>
       </div>
 
@@ -425,63 +598,131 @@
   </div>
 </section>
 
-
-    <!-- PROJECTS / PORTFOLIO -->
-    <section id="projects" class="grid">
-      <div class="card col-12">
-        <div class="card-pad">
-          <h2>Portfolio</h2>
-          
-          <div class="list">
-            <div class="item">
-              <div class="item-top">
-                <div class="item-title">Data Science Portfolio</div>
-                <a class="pill" href="https://www.datascienceportfol.io/joelabadi23" target="_blank" rel="noreferrer">Open</a>
-              </div>
-              <p class="muted" style="margin:0">Projects, dashboards, and analyses from my bootcamp + personal work.</p>
-            </div>
-            <div class="item">
-              <div class="item-top">
-                <div class="item-title">LinkedIn</div>
-                <a class="pill" href="https://www.linkedin.com/in/joel-abadi-28a244a1/" target="_blank" rel="noreferrer">Open</a>
-              </div>
-              <p class="muted" style="margin:0">Experience, recommendations, and background.</p>
-            </div>
-            <!-- Add more items if you want: GitHub, case studies, etc. -->
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="grid">
-      <div class="card col-12">
-        <div class="card-pad">
-          <h2>Contact</h2>
-          <p class="muted">Fastest way to reach me:</p>
-          <div class="chips">
-            <!-- Replace with your email -->
-            <a class="k" href="mailto:joelabadi23@gmail.com">📩 joelabadi23@gmail.com</a>
-            <a class="k" href="https://www.linkedin.com/in/joel-abadi-28a244a1/" target="_blank" rel="noreferrer">🔗 LinkedIn Message</a>
-          </div>
-        
-        </div>
-      </div>
-    </section>
-
-    <div class="footer">
-      <div>© <span id="y"></span> Joel Abadi</div>
-      <div class="muted">Simple, recruiter-friendly personal site</div>
+<!-- SKILLS -->
+<section id="skills">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Skills</div>
+      <h2 class="section-title">The full toolkit</h2>
     </div>
-  </main>
+    <div class="skills-cols">
+      <div class="skills-col">
+        <h3>Marketing</h3>
+        <div class="skill-list">
+          <div class="skill-item">Performance marketing</div>
+          <div class="skill-item">Campaign management</div>
+          <div class="skill-item">Media buying</div>
+          <div class="skill-item">Mobile user acquisition (UA)</div>
+          <div class="skill-item">Paid social — Meta</div>
+          <div class="skill-item">Paid search — Google Ads</div>
+          <div class="skill-item">Programmatic advertising</div>
+          <div class="skill-item">Creative testing & iteration</div>
+          <div class="skill-item">Budget pacing & scaling</div>
+          <div class="skill-item">Funnel optimization</div>
+          <div class="skill-item">Influencer / creator campaigns</div>
+          <div class="skill-item">Client & stakeholder communication</div>
+        </div>
+      </div>
+      <div class="skills-col">
+        <h3>Analytics & Data</h3>
+        <div class="skill-list">
+          <div class="skill-item">Performance reporting</div>
+          <div class="skill-item">Mobile attribution (AppsFlyer)</div>
+          <div class="skill-item">A/B testing & experiment design</div>
+          <div class="skill-item">KPI tracking & insight generation</div>
+          <div class="skill-item">Funnel analysis</div>
+          <div class="skill-item">Trend analysis</div>
+          <div class="skill-item">Dashboard design</div>
+          <div class="skill-item">SQL (learning)</div>
+          <div class="skill-item">Python (scripting)</div>
+        </div>
+      </div>
+      <div class="skills-col">
+        <h3>Tools & Platforms</h3>
+        <div class="skill-list">
+          <div class="skill-item">Meta Ads Manager</div>
+          <div class="skill-item">Google Ads</div>
+          <div class="skill-item">AppsFlyer</div>
+          <div class="skill-item">Moloco</div>
+          <div class="skill-item">Kayzen</div>
+          <div class="skill-item">Looker Studio</div>
+          <div class="skill-item">Excel / Google Sheets</div>
+          <div class="skill-item">Tableau (projects)</div>
+          <div class="skill-item">Power BI (projects)</div>
+          <div class="skill-item">Google Analytics</div>
+          <div class="skill-item">VS Code · GitHub</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
-  <script>
-    document.getElementById("y").textContent = new Date().getFullYear();
-  </script>
+<!-- PORTFOLIO -->
+<section id="portfolio">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="section-kicker">Portfolio</div>
+      <h2 class="section-title">Work & presence</h2>
+    </div>
+    <div class="portfolio-grid">
+      <a href="https://www.datascienceportfol.io/joelabadi23" target="_blank" class="portfolio-card">
+        <div class="portfolio-card-icon">📊</div>
+        <h3>Data Science Portfolio</h3>
+        <p>Projects, dashboards, and analyses from bootcamp and personal work — including performance marketing case studies.</p>
+        <div class="portfolio-card-link">View portfolio →</div>
+      </a>
+      <a href="https://www.linkedin.com/in/joel-abadi-28a244a1/" target="_blank" class="portfolio-card">
+        <div class="portfolio-card-icon">💼</div>
+        <h3>LinkedIn</h3>
+        <p>Full work history, recommendations, and professional background. Actively updated.</p>
+        <div class="portfolio-card-link">View profile →</div>
+      </a>
+      <a href="https://joelabadi.github.io/joelabadi-site/CV.pdf" target="_blank" class="portfolio-card">
+        <div class="portfolio-card-icon">📄</div>
+        <h3>CV / Resume</h3>
+        <p>One-page PDF with quantified achievements, certifications, and full experience history.</p>
+        <div class="portfolio-card-link">Download PDF →</div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="contact-inner">
+      <div class="section-header" style="margin-bottom:1.5rem;">
+        <div class="section-kicker">Contact</div>
+        <h2 class="section-title">Let's talk</h2>
+        <p class="section-desc">Whether you're building a team in LATAM or need a senior media buyer who knows mobile UA — I'm open to conversations.</p>
+      </div>
+      <div class="contact-links">
+        <a href="mailto:joelabadi23@gmail.com" class="contact-link">
+          <div class="contact-link-icon">✉️</div>
+          <div>
+            <div class="contact-link-label">Email</div>
+            <div class="contact-link-value">joelabadi23@gmail.com</div>
+          </div>
+        </a>
+        <a href="https://www.linkedin.com/in/joel-abadi-28a244a1/" target="_blank" class="contact-link">
+          <div class="contact-link-icon">🔗</div>
+          <div>
+            <div class="contact-link-label">LinkedIn</div>
+            <div class="contact-link-value">linkedin.com/in/joel-abadi-28a244a1</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">Joel Abadi</div>
+  <div>Performance Marketing · Panama / Tel Aviv</div>
+  <div>
+    <a href="mailto:joelabadi23@gmail.com">joelabadi23@gmail.com</a>
+  </div>
+</footer>
+
 </body>
 </html>
-
-
-
-
-
